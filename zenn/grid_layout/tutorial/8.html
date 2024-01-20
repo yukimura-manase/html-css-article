@@ -1,0 +1,56 @@
+<!-- 8. CSS グリッド スケール -->
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  [class^="box-"] {
+    background-color: skyblue;
+    /* To place the letter at the center */
+    display: grid;
+    place-items: center;
+  }
+  .container {
+    /* 2つは、同じ意味 */
+    /* grid-template-columns: repeat(5, 1fr); */
+    /* grid-template-columns : 1fr 1fr 1fr 1fr 1fr; */
+
+    display: grid;
+    gap: 20px;
+    height: 100vh;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  .box-1 {
+    /* grid-column-start: 1;
+    grid-column-end: 2; */
+
+    /* The shorthand -> */
+    /* grid-column: 1 / 2; */
+
+    /* grid-column: span 1; */
+
+    /* 空の8つの分数を.box-1に代入する */
+    grid-column: 1/10;
+    /* 
+      どうやって計算したのですか？
+      自体は 1 ボックスを占めますbox-1。
+      さらに8つのボックスを追加しています。
+      最後に、終了を示す 1 を追加する必要があるため、8+1+1 = 10 となります。 
+    */
+
+    /* spanキーワードの場合 */
+    .box-1 {
+      grid-column: span 9;
+    }
+  }
+</style>
+<div class="container">
+  <div class="box-1">A</div>
+  <div class="box-2">B</div>
+  <div class="box-3">C</div>
+  <div class="box-4">D</div>
+</div>

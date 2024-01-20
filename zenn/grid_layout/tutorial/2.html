@@ -1,0 +1,27 @@
+<!-- 2. Grid Rows の定義 -->
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  [class^="box-"] {
+    background-color: skyblue;
+
+    /* To place the letter at the center */
+    display: grid;
+    place-items: center;
+  }
+  .container {
+    display: grid;
+    gap: 20px;
+    height: 100vh;
+
+    grid-template-rows: 200px auto 100px;
+  }
+</style>
+<div class="container">
+  <div class="box-1">A</div>
+  <div class="box-2">B</div>
+  <div class="box-3">C</div>
+</div>

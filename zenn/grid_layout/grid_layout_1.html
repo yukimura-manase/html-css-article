@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout Example 1</title>
+    <style>
+      /* Grid Layout 親要素 */
+      .grid-container {
+        /* 
+          Grid Layout を作成する
+          - display: grid; または、で display: inline-grid; でGrid Layout を作成する
+        */
+        display: grid;
+        /* display: inline-grid; */
+        grid-template-columns: repeat(3, 1fr);
+        /* 列と行、ともに gap */
+        grid-gap: 10px;
+        background-color: #f1f1f1;
+        padding: 10px;
+      }
+      /* Grid Layout 子要素 */
+      .grid-item {
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        padding: 20px;
+        text-align: center;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Grid Container -->
+    <div class="grid-container">
+      <!-- Grid Item -->
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+    </div>
+  </body>
+</html>

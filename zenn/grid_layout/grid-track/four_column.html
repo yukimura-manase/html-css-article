@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout Test</title>
+    <style>
+      /* デフォルトのブラウザスタイルをクリア */
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .grid-container {
+        display: grid;
+        gap: 20px;
+        /* 4つの列を作成する & width指定 */
+        /* grid-template-columns: 100px 300px 1fr 1fr; */
+
+        grid-template-columns: 100px 300px 1fr 1fr;
+      }
+      .grid-item {
+        background-color: skyblue;
+        border: 1px solid #cccccc;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+        font-size: 36px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Grid Container -->
+    <div class="grid-container">
+      <div class="grid-item">A</div>
+      <div class="grid-item">B</div>
+      <div class="grid-item">C</div>
+      <div class="grid-item">C</div>
+    </div>
+  </body>
+</html>

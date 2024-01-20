@@ -1,0 +1,39 @@
+<!-- 3. Grid Area の定義 -->
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  [class^="box-"] {
+    background-color: skyblue;
+
+    /* To place the letter at the center */
+    display: grid;
+    place-items: center;
+  }
+  .container {
+    display: grid;
+    gap: 20px;
+    height: 100vh;
+
+    grid-template-areas:
+      "A A A A   A A A A   A A A A"
+      "B B B B   B B B B   B B C C"
+      "B B B B   B B B B   B B C C";
+  }
+  .box-1 {
+    grid-area: A;
+  }
+  .box-2 {
+    grid-area: B;
+  }
+  .box-3 {
+    grid-area: C;
+  }
+</style>
+<div class="container">
+  <div class="box-1">A</div>
+  <div class="box-2">B</div>
+  <div class="box-3">C</div>
+</div>

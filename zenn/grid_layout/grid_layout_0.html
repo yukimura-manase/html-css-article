@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout Example 0</title>
+    <style>
+      /* デフォルトのブラウザスタイルをクリア */
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        font-size: 40px;
+        width: 100%;
+        min-height: 100vh;
+      }
+
+      /* class属性が「box-」で始まるすべての要素にスタイルを適用する */
+      [class^="box-"] {
+        background-color: skyblue;
+        display: grid;
+        /* アイテム（子要素）を水平および垂直方向の中央に配置する */
+        place-items: center;
+      }
+      /* Grid Container */
+      .container {
+        display: grid;
+        gap: 20px;
+        height: 100vh;
+
+        grid-template-areas:
+          "A A A A   A A A A   A A A A"
+          "B B B B   B B B B   B B C C"
+          "B B B B   B B B B   B B C C";
+      }
+      .box-1 {
+        grid-area: A;
+      }
+      .box-2 {
+        grid-area: B;
+      }
+      .box-3 {
+        grid-area: C;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box-1">A</div>
+      <div class="box-2">B</div>
+      <div class="box-3">C</div>
+    </div>
+  </body>
+</html>

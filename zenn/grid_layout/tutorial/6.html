@@ -1,0 +1,30 @@
+<!-- 6. justify-items プロパティ -->
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  [class^="box-"] {
+    background-color: skyblue;
+
+    /* To place the letter at the center */
+    display: grid;
+    place-items: center;
+  }
+  .container {
+    display: grid;
+    gap: 50px;
+    height: 100vh;
+
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px;
+    justify-items: end;
+  }
+</style>
+<div class="container">
+  <div class="box-1">A</div>
+  <div class="box-2">B</div>
+  <div class="box-3">C</div>
+  <div class="box-4">D</div>
+</div>
