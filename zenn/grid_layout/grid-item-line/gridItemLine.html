@@ -1,0 +1,57 @@
+<!--  -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout Test</title>
+    <style>
+      /* デフォルトのブラウザスタイルをクリア */
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      /* 配置したい Grid Item */
+      #item {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+      }
+      .grid-container {
+        display: grid;
+        gap: 20px;
+        /* 画面の高さいっぱい */
+        height: 100vh;
+        /* 行の数と高さを定義する： 3つの行を作成する・heightは指定した値で作成する */
+        grid-template-rows: 200px auto 100px;
+
+        /* 3つの列を作成する & width指定 */
+        grid-template-columns: 100px 1fr 1fr;
+        /* 行の数と高さを定義する： 3つの行をを均等なheightで作成する */
+        /* grid-template-rows: repeat(3, 1fr); */
+      }
+      .grid-item {
+        background-color: skyblue;
+        border: 1px solid #cccccc;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+        font-size: 36px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Grid Container -->
+    <div class="grid-container">
+      <div class="grid-item">A</div>
+      <!-- 配置したい Gird Item -->
+      <div id="item">
+        <img
+          src="https://storage.googleapis.com/zenn-user-upload/avatar/d936fa57c0.jpeg"
+          alt="AIQ Logo"
+        />
+      </div>
+      <div class="grid-item">B</div>
+      <div class="grid-item">C</div>
+    </div>
+  </body>
+</html>

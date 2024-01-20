@@ -13,10 +13,12 @@
       .grid-container {
         display: grid;
         gap: 20px;
-        /* 4つの列を作成する & width指定 */
-        /* grid-template-columns: 100px 300px 1fr 1fr; */
-
-        grid-template-columns: 100px 300px 1fr 1fr;
+        /* 画面の高さいっぱい */
+        height: 100vh;
+        /* 行の数と高さを定義する： 3つの行を作成する・heightは指定した値で作成する */
+        grid-template-rows: 200px auto 100px;
+        /* 行の数と高さを定義する： 3つの行をを均等なheightで作成する */
+        /* grid-template-rows: repeat(3, 1fr); */
       }
       .grid-item {
         background-color: skyblue;
@@ -33,7 +35,6 @@
     <div class="grid-container">
       <div class="grid-item">A</div>
       <div class="grid-item">B</div>
-      <div class="grid-item">C</div>
       <div class="grid-item">C</div>
     </div>
   </body>

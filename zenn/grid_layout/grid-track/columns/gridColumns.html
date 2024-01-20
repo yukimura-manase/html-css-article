@@ -13,17 +13,18 @@
       .grid-container {
         display: grid;
         gap: 20px;
-        /* 画面の高さいっぱい */
-        height: 100vh;
-        /* 行の数と高さを定義する： 3つの行を作成する・heightは指定した値で作成する */
-        /* grid-template-rows: 200px auto 100px; */
-        /* 行の数と高さを定義する： 3つの行をを均等なheightで作成する */
-        /* grid-template-rows: repeat(3, 1fr); */
-        /* 4つの列を作成する & width指定 */
-        grid-template-columns: 100px 300px 1fr 1fr;
+
+        /* 3つの列を作成 & width は指定した値 */
+        grid-template-columns: 500px auto 100px;
+
+        /* 3つの列を均等な width で作成 */
+        grid-template-columns: repeat(3, 1fr);
+
+        /* 3つの列を作成する & width指定 */
+        grid-template-columns: 100px 1fr 1fr;
       }
       .grid-item {
-        background-color: skyblue;
+        /* background-color: skyblue; */
         border: 1px solid #cccccc;
         padding: 20px;
         text-align: center;
